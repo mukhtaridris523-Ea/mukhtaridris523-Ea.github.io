@@ -11,7 +11,8 @@ Welcome to my professional page. Here you can access my CV and portfolio.
 
 📄 [Download My CV](Mukhtar_Idris_CV.pdf)
 
-📁 [View My Portfolio](Mukhtar_Idris_Portfolio.pdf)
+📁 [View My Portfolio](Mukhtar_Idris_Executive_Assistant_Portfolio.pdf
+)
 
 ---
 
