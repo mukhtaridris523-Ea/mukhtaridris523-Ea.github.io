@@ -36,5 +36,6 @@ Professional Documentation Management
 ---
 
 ## 📫 Contact
-LinkedIn ([Mukhtar Idris](https://www.linkedin.com/in/mukhtar-idris))  
+
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/mukhtar-idris-5907503ab)
 Email (Mukhtaridris523@gmail.com)
