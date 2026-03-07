@@ -1,17 +1,17 @@
 # Mukhtar Idris
-Executive & Administrative Assistant
 
-Detail-oriented Executive Assistant experienced in coordinating operations, managing executive workflows, and supporting cross-functional teams. Skilled in digital collaboration tools, project coordination, and professional documentation management.
+Executive & Administrative Assistant  
+Operations Support | Remote Collaboration
+
+Welcome to my professional page. Here you can access my CV and portfolio.
 
 ---
 
-## 📄 Professional Documents
+## Professional Documents
 
-**Curriculum Vitae**  
-[Download My CV](Mukhtar_Idris_CV.pdf)
+📄 [Download My CV](Mukhtar_Idris_CV.pdf)
 
-**Professional Portfolio**  
-[View Portfolio](Mukhtar_Idris_Portfolio.pdf)
+📁 [View My Portfolio](Mukhtar_Idris_Portfolio.pdf)
 
 ---
 
@@ -36,5 +36,5 @@ Professional Documentation Management
 ---
 
 ## 📫 Contact
-LinkedIn (to be added)  
-Email (to be added)
+LinkedIn (www.linkedin.com/in/mukhtar-idris-5907503ab)  
+Email (Mukhtaridris523@gmail.com)
