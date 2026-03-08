@@ -14,6 +14,13 @@ Welcome to my professional page. Here you can access my CV and portfolio.
 📁 [View My Portfolio](Mukhtar_Idris_Executive_Assistant_Portfolio.pdf
 )
 
+## Featured Case Study
+
+Executive Operations Support System  
+A structured workflow designed to help executives manage communication, meetings, research preparation, and operational follow-ups efficiently.
+
+View the full case study here:
+[Executive Operations Support System](executive-operations-case-study.md)
 ---
 
 ## 🛠 Tools & Platforms
