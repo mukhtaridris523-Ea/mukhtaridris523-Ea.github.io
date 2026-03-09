@@ -32,7 +32,7 @@ Designing structured workflows for task tracking, documentation, and operational
 
 • Research & Information Preparation  
 Compiling clear and structured information to support decision-making.
-
+_
 • Startup Operational Support  
 Helping founders manage administrative operations so they can focus on growth.
 
@@ -42,8 +42,8 @@ ClickUp
 Trello  
 Asana  
 Dropbox  
--Github
--Notion
+- Github
+- Notion
 
 ---
 
