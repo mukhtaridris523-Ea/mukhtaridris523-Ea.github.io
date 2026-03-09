@@ -42,8 +42,7 @@ Slack
 ClickUp  
 Trello  
 Asana  
-Dropbox
-- Github
+Dropbox- Github
 - Notion
 
 ---
