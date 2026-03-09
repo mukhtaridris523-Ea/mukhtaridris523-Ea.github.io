@@ -42,8 +42,8 @@ ClickUp
 Trello  
 Asana  
 Dropbox  
-GitHub
-Notion
+-Github
+-Notion
 
 ---
 
