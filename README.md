@@ -38,12 +38,15 @@ Helping founders manage administrative operations so they can focus on growth.
 
 ## 🛠 Tools & Platforms
 
-Slack  
-ClickUp  
-Trello  
-Asana  
-Dropbox- Github
+- Slack
+- ClickUp
+- Trello
+- Asana
+- Dropbox
+- GitHub
 - Notion
+- Google Workspace
+- Calendly
 
 ---
 
