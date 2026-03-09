@@ -22,6 +22,22 @@ A structured workflow designed to help executives manage communication, meetings
 ---
 Focus: Executive support systems, workflow structure, and operational efficiency.
 
+## How I Work
+
+My role as an Executive Assistant is to create clarity, structure, and reliable execution around a founder’s day-to-day operations.
+
+I focus on turning scattered information, unstructured ideas, and busy workflows into organized systems that support faster decision-making and smoother collaboration.
+
+My approach typically includes:
+
+• Structuring calendars and meeting workflows to reduce scheduling conflicts  
+• Organizing internal documents and shared resources for easier access  
+• Drafting clear professional communication on behalf of leadership  
+• Tracking tasks and ensuring important follow-ups are not missed  
+• Turning rough ideas into clear documents, summaries, or action plans  
+
+The goal is simple: reduce operational friction so leaders can focus on high-value work.
+
 ## Services I Offer
 
 • Executive Assistant Support  
