@@ -5,6 +5,8 @@ background:#f4f6f8;
 color:#333;
 }
 
+/* Navigation */
+
 nav{
 display:flex;
 justify-content:space-between;
@@ -14,6 +16,7 @@ background:white;
 box-shadow:0 2px 5px rgba(0,0,0,0.08);
 position:sticky;
 top:0;
+z-index:100;
 }
 
 .nav-links a{
@@ -23,16 +26,30 @@ color:#0a66c2;
 font-weight:500;
 }
 
+/* Hero Section */
+
 header{
 background:#0a66c2;
 color:white;
 text-align:center;
-padding:70px 20px;
+padding:80px 20px;
+}
+
+h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+header p{
+font-size:18px;
+opacity:0.9;
 }
 
 .hero-buttons{
-margin-top:20px;
+margin-top:25px;
 }
+
+/* Buttons */
 
 .button{
 display:inline-block;
@@ -50,23 +67,34 @@ transition:all 0.2s ease;
 background:#084c94;
 transform:translateY(-2px);
 }
-}
+
+/* Premium Section Style */
 
 section{
+background:white;
 max-width:900px;
-margin:40px auto;
-padding:0 20px;
+margin:50px auto;
+padding:40px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:transform 0.2s ease;
+}
+
+section:hover{
+transform:translateY(-3px);
 }
 
 h2{
 color:#0a66c2;
-margin-bottom:10px;
+margin-bottom:15px;
 }
+
+/* Tools Grid */
 
 .tools{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:10px;
+gap:12px;
 padding:0;
 list-style:none;
 }
@@ -79,11 +107,8 @@ box-shadow:0 2px 5px rgba(0,0,0,0.08);
 text-align:center;
 }
 
-footer{
-text-align:center;
-padding:30px;
-color:#666;
-}
+/* Profile Section */
+
 .profile{
 display:flex;
 align-items:center;
@@ -92,8 +117,8 @@ max-width:850px;
 margin:auto;
 background:white;
 padding:30px;
-border-radius:8px;
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
+border-radius:10px;
+box-shadow:0 5px 18px rgba(0,0,0,0.08);
 }
 
 .profile img{
@@ -101,4 +126,12 @@ width:120px;
 height:120px;
 border-radius:50%;
 object-fit:cover;
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+padding:35px;
+color:#666;
 }
