@@ -36,13 +36,20 @@ margin-top:20px;
 
 .button{
 display:inline-block;
-background:white;
-color:#0a66c2;
-padding:12px 20px;
+padding:12px 22px;
 margin:10px;
-border-radius:6px;
+background:#0a66c2;
+color:white;
 text-decoration:none;
-font-weight:bold;
+border-radius:6px;
+font-weight:500;
+transition:all 0.2s ease;
+}
+
+.button:hover{
+background:#084c94;
+transform:translateY(-2px);
+}
 }
 
 section{
@@ -76,4 +83,22 @@ footer{
 text-align:center;
 padding:30px;
 color:#666;
+}
+.profile{
+display:flex;
+align-items:center;
+gap:30px;
+max-width:850px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:8px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.profile img{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
 }
