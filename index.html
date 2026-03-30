@@ -267,11 +267,12 @@
       position: relative;
       z-index: 1;
       width: 100%;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-      object-position: top center;
+      aspect-ratio: 4/5;
+      object-fit: contain;
+      object-position: center center;
       display: block;
       filter: grayscale(15%);
+      background: var(--ivory-dark, #ede8df);
     }
 
     .hero-badge {
@@ -707,8 +708,8 @@
       <div class="hero-image-frame">
         <img src="profile.jpg" alt="Mukhtar Idris – Executive Assistant">
         <div class="hero-badge">
-          <strong>3+</strong>
-          Years of<br>EA Experience
+          <strong>1</strong>
+          Year EA<br>Experience
         </div>
       </div>
     </div>
@@ -850,13 +851,13 @@
       </div>
 
       <div class="contact-items reveal reveal-delay-1">
-        <a href="mailto:Mukhtaridris523@gmail.com" class="contact-item">
+        <a href="/cdn-cgi/l/email-protection#511c243a39253023383523382264636211363c30383d7f323e3c" class="contact-item">
           <svg class="contact-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
           </svg>
           <div>
             <div class="contact-item-label">Email</div>
-            <div class="contact-item-value">Mukhtaridris523@gmail.com</div>
+            <div class="contact-item-value"><span class="__cf_email__" data-cfemail="c68bb3adaeb2a7b4afa2b4afb5f3f4f586a1aba7afaae8a5a9ab">[email&#160;protected]</span></div>
           </div>
         </a>
 
@@ -879,7 +880,7 @@
     <p>© 2026 · Executive Assistant · All rights reserved</p>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Mobile nav
     const toggle = document.getElementById('navToggle');
     const links = document.getElementById('navLinks');
@@ -904,15 +905,4 @@
       });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Trigger hero reveals on load
-    setTimeout(() => {
-      document.querySelectorAll('.hero-text .reveal, .hero-image-wrap').forEach(el => {
-        el.classList.add('visible');
-      });
-    }, 150);
-  </script>
-
-</body>
-</html>
+    document.querySelectorAll('.reveal').forEach(el => obser
