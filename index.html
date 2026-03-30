@@ -12,659 +12,131 @@
   <meta property="og:url" content="https://mukhtaridris523-ea.github.io/">
   <meta name="google-site-verification" content="00k2jMj-yxh9ID2egwVnFfCBpZvAuinYpNt0Fm5e588" />
   <title>Mukhtar Idris | Executive Assistant</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --ink: #0d0d0d;
-      --paper: #f5f2ec;
-      --accent: #b5873a;
-      --accent-light: #e8d5b0;
-      --muted: #7a7269;
+      --ink: #0d0d0d; --paper: #f5f2ec; --accent: #b5873a;
+      --accent-light: #e8d5b0; --muted: #7a7269;
       --line: rgba(13,13,13,0.12);
       --display: 'Cormorant Garamond', Georgia, serif;
       --body: 'DM Sans', sans-serif;
     }
-
     html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--paper);
-      color: var(--ink);
-      font-family: var(--body);
-      font-size: 16px;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    /* NOISE TEXTURE */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 1000;
-      opacity: 0.5;
-    }
-
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.2rem 4rem;
-      background: rgba(245,242,236,0.88);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav-logo {
-      font-family: var(--display);
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--ink);
-      text-decoration: none;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-    }
-
-    .nav-links a {
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
-      position: relative;
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -2px; left: 0;
-      width: 0; height: 1px;
-      background: var(--accent);
-      transition: width 0.3s;
-    }
-
+    body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.7; overflow-x: hidden; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 4rem; background: rgba(245,242,236,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+    .nav-logo { font-family: var(--display); font-size: 1.25rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+    .nav-links { display: flex; gap: 2.5rem; }
+    .nav-links a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; position: relative; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 1px; background: var(--accent); transition: width 0.3s; }
     .nav-links a:hover { color: var(--ink); }
     .nav-links a:hover::after { width: 100%; }
-
-    .nav-toggle {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 4px;
-    }
-
-    .nav-toggle span {
-      display: block;
-      width: 24px;
-      height: 1.5px;
-      background: var(--ink);
-      transition: all 0.3s;
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      padding: 8rem 4rem 4rem;
-      gap: 4rem;
-      position: relative;
-    }
-
-    .hero::after {
-      content: 'EA';
-      position: absolute;
-      right: -0.05em;
-      bottom: -0.1em;
-      font-family: var(--display);
-      font-size: clamp(12rem, 22vw, 22rem);
-      font-weight: 300;
-      color: transparent;
-      -webkit-text-stroke: 1px rgba(181,135,58,0.12);
-      pointer-events: none;
-      line-height: 1;
-      z-index: 0;
-    }
-
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 1.5px; background: var(--ink); transition: all 0.3s; }
+    .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 8rem 4rem 4rem; gap: 4rem; position: relative; }
+    .hero::after { content: 'EA'; position: absolute; right: -0.05em; bottom: -0.1em; font-family: var(--display); font-size: clamp(12rem, 22vw, 22rem); font-weight: 300; color: transparent; -webkit-text-stroke: 1px rgba(181,135,58,0.12); pointer-events: none; line-height: 1; z-index: 0; }
     .hero-text { position: relative; z-index: 1; }
-
-    .hero-eyebrow {
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .hero-eyebrow::before {
-      content: '';
-      display: block;
-      width: 2.5rem;
-      height: 1px;
-      background: var(--accent);
-    }
-
-    .hero h1 {
-      font-family: var(--display);
-      font-size: clamp(3rem, 6vw, 5.5rem);
-      font-weight: 300;
-      line-height: 1.05;
-      margin-bottom: 0.3rem;
-    }
-
-    .hero h1 em {
-      font-style: italic;
-      color: var(--accent);
-    }
-
-    .hero-sub {
-      font-family: var(--display);
-      font-size: clamp(1.1rem, 2vw, 1.4rem);
-      font-weight: 300;
-      color: var(--muted);
-      font-style: italic;
-      margin-bottom: 2.5rem;
-    }
-
-    .hero-desc {
-      font-size: 0.95rem;
-      color: var(--muted);
-      max-width: 38ch;
-      margin-bottom: 3rem;
-      line-height: 1.8;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.75rem;
-      font-family: var(--body);
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border: 1px solid;
-      transition: all 0.25s;
-    }
-
-    .btn-primary {
-      background: var(--ink);
-      color: var(--paper);
-      border-color: var(--ink);
-    }
-
-    .btn-primary:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-    }
-
-    .btn-outline {
-      color: var(--ink);
-      border-color: var(--ink);
-    }
-
-    .btn-outline:hover {
-      background: var(--ink);
-      color: var(--paper);
-    }
-
-    /* HERO IMAGE */
-    .hero-image-wrap {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      justify-content: center;
-    }
-
-    .hero-image-frame {
-      position: relative;
-      width: min(380px, 90%);
-    }
-
-    .hero-image-frame::before {
-      content: '';
-      position: absolute;
-      top: 1.5rem; right: -1.5rem;
-      width: 100%; height: 100%;
-      border: 1px solid var(--accent-light);
-      z-index: 0;
-    }
-
-    .hero-image-frame img {
-      position: relative;
-      z-index: 1;
-      width: 100%;
-      aspect-ratio: 4/5;
-      object-fit: contain;
-      object-position: center center;
-      display: block;
-      filter: grayscale(15%);
-      background: var(--ivory-dark, #ede8df);
-    }
-
-    .hero-badge {
-      position: absolute;
-      bottom: -1.5rem;
-      left: -1.5rem;
-      z-index: 2;
-      background: var(--accent);
-      color: var(--paper);
-      padding: 1.25rem 1.5rem;
-      font-size: 0.75rem;
-      line-height: 1.5;
-    }
-
-    .hero-badge strong {
-      display: block;
-      font-family: var(--display);
-      font-size: 2rem;
-      font-weight: 600;
-      line-height: 1;
-    }
-
-    /* DIVIDER */
-    .section-divider {
-      height: 1px;
-      background: var(--line);
-      margin: 0 4rem;
-    }
-
-    /* SECTION SHARED */
+    .hero-eyebrow { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+    .hero-eyebrow::before { content: ''; display: block; width: 2.5rem; height: 1px; background: var(--accent); }
+    .hero h1 { font-family: var(--display); font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 300; line-height: 1.05; margin-bottom: 0.3rem; }
+    .hero h1 em { font-style: italic; color: var(--accent); }
+    .hero-sub { font-family: var(--display); font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 300; color: var(--muted); font-style: italic; margin-bottom: 2.5rem; }
+    .hero-desc { font-size: 0.95rem; color: var(--muted); max-width: 38ch; margin-bottom: 3rem; line-height: 1.8; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.75rem; font-family: var(--body); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; border: 1px solid; transition: all 0.25s; }
+    .btn-primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+    .btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+    .btn-outline { color: var(--ink); border-color: var(--ink); }
+    .btn-outline:hover { background: var(--ink); color: var(--paper); }
+    .hero-image-wrap { position: relative; z-index: 1; display: flex; justify-content: center; }
+    .hero-image-frame { position: relative; width: min(380px, 90%); }
+    .hero-image-frame::before { content: ''; position: absolute; top: 1.5rem; right: -1.5rem; width: 100%; height: 100%; border: 1px solid var(--accent-light); z-index: 0; }
+    .hero-image-frame img { position: relative; z-index: 1; width: 100%; aspect-ratio: 4/5; object-fit: contain; object-position: center; display: block; filter: grayscale(15%); background: #ede8df; }
+    .hero-badge { position: absolute; bottom: -1.5rem; left: -1.5rem; z-index: 2; background: var(--accent); color: var(--paper); padding: 1.25rem 1.5rem; font-size: 0.75rem; line-height: 1.5; }
+    .hero-badge strong { display: block; font-family: var(--display); font-size: 2rem; font-weight: 600; line-height: 1; }
+    .section-divider { height: 1px; background: var(--line); margin: 0 4rem; }
     section { padding: 6rem 4rem; }
-
-    .section-label {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .section-label::before {
-      content: '';
-      display: block;
-      width: 2rem;
-      height: 1px;
-      background: var(--accent);
-    }
-
-    .section-title {
-      font-family: var(--display);
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: 300;
-      line-height: 1.1;
-      margin-bottom: 2.5rem;
-    }
-
+    .section-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+    .section-label::before { content: ''; display: block; width: 2rem; height: 1px; background: var(--accent); }
+    .section-title { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.1; margin-bottom: 2.5rem; }
     .section-title em { font-style: italic; color: var(--accent); }
-
-    /* HIGHLIGHTS */
-    .highlights-section {
-      background: var(--ink);
-      color: var(--paper);
-      padding: 5rem 4rem;
-    }
-
+    .highlights-section { background: var(--ink); color: var(--paper); padding: 5rem 4rem; }
     .highlights-section .section-label { color: var(--accent-light); }
     .highlights-section .section-label::before { background: var(--accent-light); }
-
-    .highlights-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 0;
-      margin-top: 1rem;
-    }
-
-    .highlight-item {
-      padding: 2rem;
-      border: 1px solid rgba(245,242,236,0.1);
-      transition: background 0.25s;
-    }
-
+    .highlights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0; margin-top: 1rem; }
+    .highlight-item { padding: 2rem; border: 1px solid rgba(245,242,236,0.1); transition: background 0.25s; }
     .highlight-item:hover { background: rgba(181,135,58,0.1); }
-
-    .highlight-num {
-      font-family: var(--display);
-      font-size: 3rem;
-      font-weight: 300;
-      color: var(--accent);
-      line-height: 1;
-      margin-bottom: 0.5rem;
-    }
-
-    .highlight-text {
-      font-size: 0.88rem;
-      color: rgba(245,242,236,0.7);
-      line-height: 1.6;
-    }
-
-    /* ABOUT */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 6rem;
-      align-items: start;
-    }
-
-    .about-aside {
-      position: sticky;
-      top: 7rem;
-    }
-
-    .about-aside p {
-      font-size: 0.88rem;
-      color: var(--muted);
-      line-height: 1.8;
-    }
-
-    .about-body p {
-      font-size: 1.05rem;
-      line-height: 1.9;
-      margin-bottom: 1.5rem;
-    }
-
+    .highlight-num { font-family: var(--display); font-size: 3rem; font-weight: 300; color: var(--accent); line-height: 1; margin-bottom: 0.5rem; }
+    .highlight-text { font-size: 0.88rem; color: rgba(245,242,236,0.7); line-height: 1.6; }
+    .about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 6rem; align-items: start; }
+    .about-aside { position: sticky; top: 7rem; }
+    .about-aside p { font-size: 0.88rem; color: var(--muted); line-height: 1.8; }
+    .about-body p { font-size: 1.05rem; line-height: 1.9; margin-bottom: 1.5rem; }
     .about-body p:last-child { margin-bottom: 0; }
-
-    /* PORTFOLIO */
-    .portfolio-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-
-    .portfolio-card {
-      border: 1px solid var(--line);
-      padding: 2.5rem;
-      transition: all 0.3s;
-      position: relative;
-      overflow: hidden;
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      background: var(--paper);
-    }
-
-    .portfolio-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: var(--ink);
-      transform: scaleY(0);
-      transform-origin: bottom;
-      transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
-      z-index: 0;
-    }
-
+    .portfolio-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 1rem; }
+    .portfolio-card { border: 1px solid var(--line); padding: 2.5rem; transition: all 0.3s; position: relative; overflow: hidden; text-decoration: none; color: inherit; display: block; background: var(--paper); }
+    .portfolio-card::before { content: ''; position: absolute; inset: 0; background: var(--ink); transform: scaleY(0); transform-origin: bottom; transition: transform 0.35s cubic-bezier(0.4,0,0.2,1); z-index: 0; }
     .portfolio-card:hover::before { transform: scaleY(1); }
-
-    .portfolio-card:hover .card-title,
-    .portfolio-card:hover .card-desc { color: var(--paper); }
-
-    .portfolio-card:hover .card-tag {
-      color: var(--paper);
-      border-color: rgba(245,242,236,0.3);
-    }
-
+    .portfolio-card:hover .card-title, .portfolio-card:hover .card-desc { color: var(--paper); }
+    .portfolio-card:hover .card-tag { color: var(--paper); border-color: rgba(245,242,236,0.3); }
     .portfolio-card:hover .card-arrow { color: var(--accent); }
-
     .card-inner { position: relative; z-index: 1; }
-
-    .card-icon {
-      width: 2.5rem; height: 2.5rem;
-      margin-bottom: 1.5rem;
-      color: var(--accent);
-      transition: color 0.3s;
-    }
-
+    .card-icon { width: 2.5rem; height: 2.5rem; margin-bottom: 1.5rem; color: var(--accent); transition: color 0.3s; }
     .portfolio-card:hover .card-icon { color: var(--accent-light); }
-
-    .card-title {
-      font-family: var(--display);
-      font-size: 1.5rem;
-      font-weight: 400;
-      margin-bottom: 0.75rem;
-      transition: color 0.3s;
-    }
-
-    .card-desc {
-      font-size: 0.88rem;
-      color: var(--muted);
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-      transition: color 0.3s;
-    }
-
-    .card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .card-tag {
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      border: 1px solid var(--line);
-      padding: 0.25rem 0.75rem;
-      transition: color 0.3s, border-color 0.3s;
-    }
-
-    .card-arrow {
-      font-size: 1.25rem;
-      color: var(--ink);
-      transition: color 0.3s, transform 0.3s;
-    }
-
+    .card-title { font-family: var(--display); font-size: 1.5rem; font-weight: 400; margin-bottom: 0.75rem; transition: color 0.3s; }
+    .card-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem; transition: color 0.3s; }
+    .card-footer { display: flex; align-items: center; justify-content: space-between; }
+    .card-tag { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); padding: 0.25rem 0.75rem; transition: color 0.3s, border-color 0.3s; }
+    .card-arrow { font-size: 1.25rem; color: var(--ink); transition: color 0.3s, transform 0.3s; }
     .portfolio-card:hover .card-arrow { transform: translate(4px, -4px); }
-
-    /* TOOLS */
     .tools-section { background: rgba(181,135,58,0.06); }
-
-    .tools-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .tool-pill {
-      padding: 0.6rem 1.4rem;
-      border: 1px solid var(--line);
-      font-size: 0.85rem;
-      background: var(--paper);
-      transition: all 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .tool-pill:hover {
-      background: var(--ink);
-      color: var(--paper);
-      border-color: var(--ink);
-    }
-
-    .tool-dot {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: var(--accent);
-      flex-shrink: 0;
-    }
-
-    /* CONTACT */
-    .contact-section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
-      align-items: start;
-    }
-
-    .contact-left p {
-      font-size: 0.95rem;
-      color: var(--muted);
-      line-height: 1.8;
-      max-width: 38ch;
-    }
-
+    .tools-grid { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .tool-pill { padding: 0.6rem 1.4rem; border: 1px solid var(--line); font-size: 0.85rem; background: var(--paper); transition: all 0.2s; display: flex; align-items: center; gap: 0.5rem; }
+    .tool-pill:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+    .tool-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+    .contact-section { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+    .contact-left p { font-size: 0.95rem; color: var(--muted); line-height: 1.8; max-width: 38ch; }
     .contact-items { margin-top: 3rem; }
-
-    .contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1.25rem;
-      padding: 1.5rem 0;
-      border-bottom: 1px solid var(--line);
-      text-decoration: none;
-      color: inherit;
-      transition: padding-left 0.2s;
-    }
-
+    .contact-item { display: flex; align-items: flex-start; gap: 1.25rem; padding: 1.5rem 0; border-bottom: 1px solid var(--line); text-decoration: none; color: inherit; transition: padding-left 0.2s; }
     .contact-item:first-child { border-top: 1px solid var(--line); }
     .contact-item:hover { padding-left: 0.5rem; }
-
-    .contact-item-icon {
-      width: 2rem; height: 2rem;
-      color: var(--accent);
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .contact-item-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.25rem;
-    }
-
+    .contact-item-icon { width: 2rem; height: 2rem; color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+    .contact-item-label { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.25rem; }
     .contact-item-value { font-size: 0.95rem; }
-
-    /* FOOTER */
-    footer {
-      padding: 2.5rem 4rem;
-      border-top: 1px solid var(--line);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
+    footer { padding: 2.5rem 4rem; border-top: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; }
     footer p { font-size: 0.82rem; color: var(--muted); }
-
-    .footer-name {
-      font-family: var(--display);
-      font-size: 1rem;
-    }
-
-    /* ANIMATIONS */
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
+    .footer-name { font-family: var(--display); font-size: 1rem; }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.visible { opacity: 1; transform: none; }
     .reveal-delay-1 { transition-delay: 0.1s; }
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
     .reveal-delay-4 { transition-delay: 0.4s; }
-
-    /* MOBILE */
     @media (max-width: 900px) {
       nav { padding: 1rem 1.5rem; }
-
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-
-      .nav-links.open {
-        display: flex;
-        position: fixed;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background: var(--paper);
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
-        z-index: 99;
-      }
-
+      .nav-links { display: none; flex-direction: column; gap: 1.5rem; }
+      .nav-links.open { display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--paper); align-items: center; justify-content: center; font-size: 1.2rem; z-index: 99; }
       .nav-toggle { display: flex; z-index: 101; }
-
       .nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
       .nav-toggle.open span:nth-child(2) { opacity: 0; }
       .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-
-      .hero {
-        grid-template-columns: 1fr;
-        padding: 7rem 1.5rem 4rem;
-        gap: 3rem;
-        text-align: center;
-        min-height: auto;
-      }
-
+      .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 4rem; gap: 3rem; text-align: center; min-height: auto; }
       .hero::after { display: none; }
       .hero-eyebrow { justify-content: center; }
       .hero-desc { margin-left: auto; margin-right: auto; }
       .hero-actions { justify-content: center; }
       .hero-image-frame::before { display: none; }
       .hero-badge { left: 0; }
-
       section { padding: 4rem 1.5rem; }
       .highlights-section { padding: 4rem 1.5rem; }
       .section-divider { margin: 0 1.5rem; }
-
       .about-grid { grid-template-columns: 1fr; gap: 2rem; }
       .about-aside { position: static; }
-
       .contact-section { grid-template-columns: 1fr; gap: 3rem; }
-
-      footer {
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
-        padding: 2rem 1.5rem;
-      }
+      footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 2rem 1.5rem; }
     }
-
     @media (max-width: 480px) {
       .highlights-grid { grid-template-columns: 1fr 1fr; }
       .portfolio-cards { grid-template-columns: 1fr; }
@@ -672,7 +144,6 @@
     }
   </style>
 </head>
-
 <body>
 
   <nav>
@@ -688,134 +159,85 @@
     </button>
   </nav>
 
-  <!-- HERO -->
   <div class="hero">
     <div class="hero-text">
       <div class="hero-eyebrow reveal">Executive Assistant</div>
       <h1 class="reveal reveal-delay-1">Mukhtar<br><em>Idris</em></h1>
-      <p class="hero-sub reveal reveal-delay-2">Founder & Operations Support</p>
-      <p class="hero-desc reveal reveal-delay-3">
-        I help founders and leadership teams operate with clarity — turning scattered information into structured systems that drive better decisions.
-      </p>
+      <p class="hero-sub reveal reveal-delay-2">Founder &amp; Operations Support</p>
+      <p class="hero-desc reveal reveal-delay-3">I help founders and leadership teams operate with clarity - turning scattered information into structured systems that drive better decisions.</p>
       <div class="hero-actions reveal reveal-delay-4">
-        <a href="Mukhtar_Idris_Executive_Assistant.pdf" class="btn btn-primary">Download CV</a>
+        <a href="Mukhtar_Idris_Executive_Assistant_CV.pdf" class="btn btn-primary">Download CV</a>
         <a href="Mukhtar_Idris_Executive_Assistant_Portfolio.pdf" class="btn btn-outline">View Portfolio</a>
         <a href="case-study.html" class="btn btn-outline">Case Study</a>
       </div>
     </div>
-
     <div class="hero-image-wrap reveal reveal-delay-2">
       <div class="hero-image-frame">
-        <img src="profile.jpg" alt="Mukhtar Idris – Executive Assistant">
-        <div class="hero-badge">
-          <strong>1</strong>
-          Year EA<br>Experience
-        </div>
+        <img src="profile.jpg" alt="Mukhtar Idris - Executive Assistant">
+        <div class="hero-badge"><strong>1</strong> Year EA<br>Experience</div>
       </div>
     </div>
   </div>
 
   <div class="section-divider"></div>
 
-  <!-- HIGHLIGHTS -->
   <div class="highlights-section">
     <div class="section-label">What I Bring</div>
     <h2 class="section-title" style="color:var(--paper); margin-bottom:2rem;">Quick <em>Highlights</em></h2>
     <div class="highlights-grid">
-      <div class="highlight-item reveal">
-        <div class="highlight-num">01</div>
-        <p class="highlight-text">Executive calendar & scheduling coordination across time zones</p>
-      </div>
-      <div class="highlight-item reveal reveal-delay-1">
-        <div class="highlight-num">02</div>
-        <p class="highlight-text">Operational workflow organization for remote teams</p>
-      </div>
-      <div class="highlight-item reveal reveal-delay-2">
-        <div class="highlight-num">03</div>
-        <p class="highlight-text">Documentation systems using Google Workspace & structured folders</p>
-      </div>
-      <div class="highlight-item reveal reveal-delay-3">
-        <div class="highlight-num">04</div>
-        <p class="highlight-text">Task coordination and follow-ups across distributed teams</p>
-      </div>
-      <div class="highlight-item reveal reveal-delay-4">
-        <div class="highlight-num">05</div>
-        <p class="highlight-text">Clear executive communication and structured reporting</p>
-      </div>
+      <div class="highlight-item reveal"><div class="highlight-num">01</div><p class="highlight-text">Executive calendar and scheduling coordination across time zones</p></div>
+      <div class="highlight-item reveal reveal-delay-1"><div class="highlight-num">02</div><p class="highlight-text">Operational workflow organization for remote teams</p></div>
+      <div class="highlight-item reveal reveal-delay-2"><div class="highlight-num">03</div><p class="highlight-text">Documentation systems using Google Workspace and structured folders</p></div>
+      <div class="highlight-item reveal reveal-delay-3"><div class="highlight-num">04</div><p class="highlight-text">Task coordination and follow-ups across distributed teams</p></div>
+      <div class="highlight-item reveal reveal-delay-4"><div class="highlight-num">05</div><p class="highlight-text">Clear executive communication and structured reporting</p></div>
     </div>
   </div>
 
   <div class="section-divider"></div>
 
-  <!-- ABOUT -->
   <section id="about">
     <div class="about-grid">
       <div class="about-aside reveal">
         <div class="section-label">About</div>
         <h2 class="section-title">The <em>Person</em><br>Behind the Systems</h2>
-        <p>Based in Nigeria · Available Remotely · Open to Global Founders</p>
+        <p>Based in Nigeria &middot; Available Remotely &middot; Open to Global Founders</p>
       </div>
       <div class="about-body">
-        <p class="reveal">
-          I'm an Executive Assistant focused on helping founders and leadership teams stay organized, efficient, and prepared in fast-moving environments.
-        </p>
-        <p class="reveal reveal-delay-1">
-          My work centers around executive coordination, operational documentation, workflow organization, and communication support — allowing leaders to focus on high-impact decisions while daily operations run smoothly.
-        </p>
-        <p class="reveal reveal-delay-2">
-          I believe great executive support isn't reactive — it's anticipatory. I build systems that make the unexpected manageable and the routine invisible.
-        </p>
+        <p class="reveal">I am an Executive Assistant focused on helping founders and leadership teams stay organized, efficient, and prepared in fast-moving environments.</p>
+        <p class="reveal reveal-delay-1">My work centers around executive coordination, operational documentation, workflow organization, and communication support - allowing leaders to focus on high-impact decisions while daily operations run smoothly.</p>
+        <p class="reveal reveal-delay-2">I believe great executive support is not reactive - it is anticipatory. I build systems that make the unexpected manageable and the routine invisible.</p>
       </div>
     </div>
   </section>
 
   <div class="section-divider"></div>
 
-  <!-- PORTFOLIO -->
   <section id="portfolio">
     <div class="section-label reveal">Work</div>
     <h2 class="section-title reveal reveal-delay-1">Selected <em>Portfolio</em></h2>
-
     <div class="portfolio-cards">
       <a href="Mukhtar_Idris_Executive_Assistant_Portfolio.pdf" class="portfolio-card reveal">
         <div class="card-inner">
-          <svg class="card-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-          </svg>
+          <svg class="card-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
           <h3 class="card-title">Portfolio Document</h3>
           <p class="card-desc">Structured examples of executive support work, including workflow coordination systems, task management frameworks, and operational documentation.</p>
-          <div class="card-footer">
-            <span class="card-tag">PDF</span>
-            <span class="card-arrow">↗</span>
-          </div>
+          <div class="card-footer"><span class="card-tag">PDF</span><span class="card-arrow">&#8599;</span></div>
         </div>
       </a>
-
       <a href="case-study.html" class="portfolio-card reveal reveal-delay-1">
         <div class="card-inner">
-          <svg class="card-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-          </svg>
+          <svg class="card-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
           <h3 class="card-title">Operations Case Study</h3>
-          <p class="card-desc">A deep-dive into a structured executive operations support system — demonstrating real-world problem solving for a founder-led team.</p>
-          <div class="card-footer">
-            <span class="card-tag">Case Study</span>
-            <span class="card-arrow">↗</span>
-          </div>
+          <p class="card-desc">A deep-dive into a structured executive operations support system - demonstrating real-world problem solving for a founder-led team.</p>
+          <div class="card-footer"><span class="card-tag">Case Study</span><span class="card-arrow">&#8599;</span></div>
         </div>
       </a>
-
-      <a href="Mukhtar_Idris_Executive_Assistant.pdf" class="portfolio-card reveal reveal-delay-2">
+      <a href="Mukhtar_Idris_Executive_Assistant_CV.pdf" class="portfolio-card reveal reveal-delay-2">
         <div class="card-inner">
-          <svg class="card-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-          </svg>
+          <svg class="card-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
           <h3 class="card-title">Curriculum Vitae</h3>
           <p class="card-desc">Full professional background including experience, skills, and qualifications as an Executive Assistant and operations specialist.</p>
-          <div class="card-footer">
-            <span class="card-tag">CV / Résumé</span>
-            <span class="card-arrow">↗</span>
-          </div>
+          <div class="card-footer"><span class="card-tag">CV / Resume</span><span class="card-arrow">&#8599;</span></div>
         </div>
       </a>
     </div>
@@ -823,10 +245,9 @@
 
   <div class="section-divider"></div>
 
-  <!-- TOOLS -->
   <section id="tools" class="tools-section">
     <div class="section-label reveal">Stack</div>
-    <h2 class="section-title reveal reveal-delay-1">Tools & <em>Platforms</em></h2>
+    <h2 class="section-title reveal reveal-delay-1">Tools &amp; <em>Platforms</em></h2>
     <div class="tools-grid">
       <div class="tool-pill reveal"><span class="tool-dot"></span>Google Workspace</div>
       <div class="tool-pill reveal reveal-delay-1"><span class="tool-dot"></span>Notion</div>
@@ -841,7 +262,6 @@
 
   <div class="section-divider"></div>
 
-  <!-- CONTACT -->
   <section id="contact">
     <div class="contact-section">
       <div class="contact-left">
@@ -849,22 +269,16 @@
         <h2 class="section-title reveal reveal-delay-1">Let's <em>Work</em><br>Together</h2>
         <p class="reveal reveal-delay-2">Open to remote executive assistant roles and operations support engagements with founders and growing teams worldwide.</p>
       </div>
-
       <div class="contact-items reveal reveal-delay-1">
         <a href="mailto:Mukhtaridris523@gmail.com" class="contact-item">
-          <svg class="contact-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
-          </svg>
+          <svg class="contact-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
           <div>
             <div class="contact-item-label">Email</div>
             <div class="contact-item-value">Mukhtaridris523@gmail.com</div>
           </div>
         </a>
-
         <a href="https://www.linkedin.com/in/mukhtar-idris-5907503ab" target="_blank" rel="noopener" class="contact-item">
-          <svg class="contact-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"/>
-          </svg>
+          <svg class="contact-item-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"/></svg>
           <div>
             <div class="contact-item-label">LinkedIn</div>
             <div class="contact-item-value">mukhtar-idris-5907503ab</div>
@@ -874,36 +288,35 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <span class="footer-name">Mukhtar Idris</span>
-    <p>© 2026 · Executive Assistant · All rights reserved</p>
+    <p>2026 &middot; Executive Assistant &middot; All rights reserved</p>
   </footer>
 
   <script>
-    // Mobile nav
-    const toggle = document.getElementById('navToggle');
-    const links = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('open');
-      links.classList.toggle('open');
-    });
-    links.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        toggle.classList.remove('open');
-        links.classList.remove('open');
-      });
-    });
-
-    // Scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
+    var t = document.getElementById('navToggle');
+    var l = document.getElementById('navLinks');
+    if (t && l) {
+      t.addEventListener('click', function() { t.classList.toggle('open'); l.classList.toggle('open'); });
+      var items = l.querySelectorAll('a');
+      for (var i = 0; i < items.length; i++) {
+        items[i].addEventListener('click', function() { t.classList.remove('open'); l.classList.remove('open'); });
+      }
+    }
+    var els = document.querySelectorAll('.reveal');
+    if (window.IntersectionObserver) {
+      var obs = new IntersectionObserver(function(entries) {
+        for (var i = 0; i < entries.length; i++) {
+          if (entries[i].isIntersecting) {
+            entries[i].target.classList.add('visible');
+            obs.unobserve(entries[i].target);
+          }
         }
-      });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      }, { threshold: 0.12 });
+      for (var j = 0; j < els.length; j++) { obs.observe(els[j]); }
+    } else {
+      for (var k = 0; k < els.length; k++) { els[k].classList.add('visible'); }
+    }
   </script>
+</body>
+</html>
